@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather</title>
+</head>
+<!-- Body -->
+<body>
+    <!-- Header -->
+    <header>
+        <h2>
+            <form action="" id="city">
+                <input type="text" name="cityName" id="cityName" placeholder="Input city name">
+                <input type="submit" value="Search">
+            </form>
+        </h2>
+    </header>
+    <!-- Content div -->
+    <div class="content">
+        <h3>Current weather in city: <span id="currentCity"></span></h3>
+        
+        <!-- Current weather -->
+        <div id="current_weather">
+
+            <p id="min_temp">Min temp: <span class="min"></span></p>
+            <p id="max_temp">Max temp: <span class="max"></span></p>
+            <p id="current_temp">Current temp: <span class="current"></span></p>
+        </div>
+    </div>
+
+
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
