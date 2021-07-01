@@ -1,3 +1,8 @@
+@mixin centeredFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,4 +12,51 @@
 
 body {
     text-align: center;
+    background-image: url('../img/sun-3588618_1920.jpg');
+    background-size: cover 100vh;
+    @include centeredFlex;
+    flex-direction: column;
+    height: 100vh;
+    header {
+        width: 40%;
+        form {
+            input {
+                font-size: 1.1rem;
+                padding: 12px 5px;
+            }
+            #cityName {
+                width: 70%;
+            }
+            input[type = "submit"]{
+                width: 29%;
+        }
+    }
+}
+    .content {
+        border: 1px solid black;
+        width: 40%;
+        padding: 20px 5px;
+        @include centeredFlex;
+        text-align: left;
+        #weather_icon {
+            width: 40%;
+            @include centeredFlex;
+            img {
+                width: 60%;
+            }
+        }
+        #current_weather {
+            background-color: green;
+            width: 60%;
+            float: right;
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+            }
+            p {
+                font-size: 1.2rem;
+                padding-top: 5px;
+            }
+        }
+    }
 }

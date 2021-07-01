@@ -5,6 +5,68 @@
           box-sizing: border-box; }
 
 body {
-  text-align: center; }
+  text-align: center;
+  background-image: url("../img/sun-3588618_1920.jpg");
+  background-size: cover 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh; }
+  body header {
+    width: 40%; }
+    body header form input {
+      font-size: 1.1rem;
+      padding: 12px 5px; }
+    body header form #cityName {
+      width: 70%; }
+    body header form input[type="submit"] {
+      width: 29%; }
+  body .content {
+    border: 1px solid black;
+    width: 40%;
+    padding: 20px 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left; }
+    body .content #weather_icon {
+      width: 40%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      body .content #weather_icon img {
+        width: 60%; }
+    body .content #current_weather {
+      background-color: green;
+      width: 60%;
+      float: right; }
+      body .content #current_weather h3 {
+        font-size: 1.5rem;
+        padding-bottom: 10px; }
+      body .content #current_weather p {
+        font-size: 1.2rem;
+        padding-top: 5px; }
 
 /*# sourceMappingURL=style.css.map */
