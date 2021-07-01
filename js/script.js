@@ -17,7 +17,7 @@ formInputCity.addEventListener('submit', e => {
         response.json()
         )
         .then(data => {
-        headerCurrentCity.innerHTML = data.name;
+        headerCurrentCity.innerHTML = `${data.name}, ${data.sys.country}`;
 
         // Kelvin to Celsius function
         let kelvinToCelsius = temp => {
@@ -37,10 +37,6 @@ formInputCity.addEventListener('submit', e => {
 
         // Weather icon
         let currentWeatherIcon = data.weather[0].icon;
-
-        // if(currentWeatherIcon == '10d'){
-        //     pWeatherIcon.innerHTML = `<img src="../img/weather_icon/iconfinder_2682834_cloud_day_forecast_rain_rainy_icon_512px.png"></img>`;
-        // }
 
         if(currentWeatherIcon == '01d'){
             pWeatherIcon.innerHTML = `<img src="../img/weather_icon/iconfinder_2682848_day_forecast_sun_sunny_weather_icon_512px.png"></img>`;
@@ -78,4 +74,4 @@ formInputCity.addEventListener('submit', e => {
 
 
         formInputCity.reset();
-})
+});

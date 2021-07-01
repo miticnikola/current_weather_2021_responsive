@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     height: 100vh;
     header {
-        width: 40%;
+        width: 45%;
         form {
             input {
                 font-size: 1.1rem;
@@ -34,7 +34,7 @@ body {
 }
     .content {
         border: 1px solid black;
-        width: 40%;
+        width: 45%;
         padding: 20px 5px;
         @include centeredFlex;
         text-align: left;

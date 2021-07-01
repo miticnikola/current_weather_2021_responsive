@@ -23,7 +23,7 @@ body {
           flex-direction: column;
   height: 100vh; }
   body header {
-    width: 40%; }
+    width: 45%; }
     body header form input {
       font-size: 1.1rem;
       padding: 12px 5px; }
@@ -33,7 +33,7 @@ body {
       width: 29%; }
   body .content {
     border: 1px solid black;
-    width: 40%;
+    width: 45%;
     padding: 20px 5px;
     display: -webkit-box;
     display: -ms-flexbox;
