@@ -7,6 +7,10 @@ let pRealFeel = document.querySelector('.feel');
 let pMinTemp = document.querySelector('.min');
 let pMaxTemp = document.querySelector('.max');
 let pWeatherIcon = document.getElementById('weather_icon');
+let pDescription = document.getElementById('description');
+let h4Humidity = document.getElementById('hum');
+let h4Pressure = document.getElementById('press');
+let h4WindSpeed = document.getElementById('wind');
 
 
 formInputCity.addEventListener('submit', e => {
@@ -31,11 +35,17 @@ formInputCity.addEventListener('submit', e => {
         let minTemp = data.main.temp_min;
         let maxTemp = data.main.temp_max;
         
+        // Humidity, pressure, wind speed
+        h4Humidity.innerHTML = `${data.main.humidity}%`;
+        h4Pressure.innerHTML = `${data.main.pressure}mb`;
+        h4WindSpeed.innerHTML = `${data.wind.speed}m/s`;
+
         
         pCurrentTemp.innerHTML = Math.round(kelvinToCelsius(temp))+'°C';
         pRealFeel.innerHTML = Math.round(kelvinToCelsius(realFeel))+'°C';
         pMinTemp.innerHTML = Math.round(kelvinToCelsius(minTemp))+'°C'; // toFixed(2) ako zelim da ide na dve decimale
         pMaxTemp.innerHTML = Math.round(kelvinToCelsius(maxTemp))+'°C';
+        pDescription.innerHTML = data.weather[0].description;
 
 
         // Weather icon

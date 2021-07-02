@@ -1,3 +1,12 @@
+// Import font
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Indie+Flower&family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Kirang+Haerang&family=Shadows+Into+Light&display=swap');
+
+// Var
+$boxShadow: 0px 0px 11px 2px #ffffff;
+$yellow: rgb(236, 188, 30);
+$blue: rgb(13, 89, 175);
+
+// Mixins
 @mixin centeredFlex {
     display: flex;
     justify-content: center;
@@ -17,8 +26,9 @@ body {
     @include centeredFlex;
     flex-direction: column;
     height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
     header {
-        width: 45%;
+        width: 50%;
         form {
             input {
                 font-size: 1.1rem;
@@ -26,22 +36,57 @@ body {
             }
             #cityName {
                 width: 70%;
+                font-style: italic;
+                border: none;
+                box-shadow: $boxShadow;
+                padding-left: 10px;
+                border-radius: 5px 0 0 0;
+                outline-color: $yellow;
             }
             input[type = "submit"]{
-                width: 29%;
+                width: 28.9%;
+                background-color: $yellow;
+                border: none;
+                color: white;
+                text-shadow: 1px 1px 1px black;
+                font-weight: bold;
+                box-shadow: $boxShadow;
+                border-radius: 0 5px 0 0;
+                transition: 0.3s ease;
+                &:hover {
+                    content: '';
+                    background-color: $blue;
+                    transition: 0.3s ease;
+                }
         }
     }
 }
     .content {
-        border: 1px solid black;
-        width: 45%;
+        box-shadow: $boxShadow;
+        width: 50%;
         @include centeredFlex;
         text-align: left;
-        #weather_icon {
+        border-radius: 0 0 5px 5px;
+        background-color: rgba($color: $blue, $alpha: 0.5);
+        #icon_description {
             width: 40%;
             @include centeredFlex;
-            img {
-                width: 60%;
+            flex-direction: column;
+            // background-color: blue;
+            text-align: center;
+            #weather_icon {
+                // background-color: yellowgreen;
+                img {
+                    width: 55%;
+                }
+            }
+            #description {
+                margin-top: -10px;
+                color: white;
+                text-shadow: 1px 1px 1px black;
+                padding-bottom: 20px;
+                // background-color: yellow;
+
             }
         }
         #current_weather {
@@ -56,6 +101,9 @@ body {
             h3 {
                 font-size: 1.5rem;
                 padding-bottom: 10px;
+                #currentCity {
+                    text-shadow: 1px 1px 1px black, 2px 2px 2px $yellow;
+                }
             }
             p {
                 font-size: 1.2rem;
@@ -63,18 +111,19 @@ body {
                 padding-left: 5px;
             }
             p:nth-child(odd){
-                background-color: rgb(13, 89, 175);
+                background-color: $blue;
             }
             // p:nth-child(even){
             // }
             .temp {
                 font-weight: bold;
-                text-shadow: 1px 1px 1px rgb(13, 89, 175);
+                text-shadow: 1px 1px 1px $blue;
                 text-shadow: 1px 1px 1px black;
+                padding-left: 10px;
             }
             #current_temp {
                 .current {
-                    font-size: 1.7rem;
+                    font-size: 3rem;
                 }
             }
         }

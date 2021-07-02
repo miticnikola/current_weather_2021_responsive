@@ -13,18 +13,24 @@
     <header>
         <h2>
             <form action="" id="city">
-                <input type="text" name="cityName" id="cityName" placeholder="Input city name">
-                <input type="submit" value="Search">
+                <input type="text" name="cityName" id="cityName" placeholder="Type city name, state(rs, gr, ae, us..)">
+                <input type="submit" value="Find city">
             </form>
         </h2>
     </header>
     <!-- Content div -->
     <div class="content">
-        <!-- Weather icon -->
-        <div id="weather_icon"></div>
+        <!-- Weather icon and description -->
+        <div id="icon_description">
+            <div id="weather_icon"></div>
+            <p id="description"></p>    
+        </div>
+        
         <!-- Current weather -->
         <div id="current_weather">
             <h3>Current weather in city: <span id="currentCity"></span></h3>
+
+            <h4>Humidity: <span id="hum"></span> | Pressure: <span id="press"></span> | Wind speed: <span id="wind"></span></h4><br>
 
             <p id="current_temp">Current temp: <span class="current temp"></span></p>
             <p id="feel_temp">Real feel: <span class="feel temp"></span></p>

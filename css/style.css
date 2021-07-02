@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Indie+Flower&family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Kirang+Haerang&family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -21,19 +22,43 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh; }
+  height: 100vh;
+  font-family: 'Josefin Sans', sans-serif; }
   body header {
-    width: 45%; }
+    width: 50%; }
     body header form input {
       font-size: 1.1rem;
       padding: 12px 5px; }
     body header form #cityName {
-      width: 70%; }
+      width: 70%;
+      font-style: italic;
+      border: none;
+      -webkit-box-shadow: 0px 0px 11px 2px #ffffff;
+              box-shadow: 0px 0px 11px 2px #ffffff;
+      padding-left: 10px;
+      border-radius: 5px 0 0 0;
+      outline-color: #ecbc1e; }
     body header form input[type="submit"] {
-      width: 29%; }
+      width: 28.9%;
+      background-color: #ecbc1e;
+      border: none;
+      color: white;
+      text-shadow: 1px 1px 1px black;
+      font-weight: bold;
+      -webkit-box-shadow: 0px 0px 11px 2px #ffffff;
+              box-shadow: 0px 0px 11px 2px #ffffff;
+      border-radius: 0 5px 0 0;
+      -webkit-transition: 0.3s ease;
+      transition: 0.3s ease; }
+      body header form input[type="submit"]:hover {
+        content: '';
+        background-color: #0d59af;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease; }
   body .content {
-    border: 1px solid black;
-    width: 45%;
+    -webkit-box-shadow: 0px 0px 11px 2px #ffffff;
+            box-shadow: 0px 0px 11px 2px #ffffff;
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -43,8 +68,10 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: left; }
-    body .content #weather_icon {
+    text-align: left;
+    border-radius: 0 0 5px 5px;
+    background-color: rgba(13, 89, 175, 0.5); }
+    body .content #icon_description {
       width: 40%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -54,9 +81,19 @@ body {
               justify-content: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
-      body .content #weather_icon img {
-        width: 60%; }
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      text-align: center; }
+      body .content #icon_description #weather_icon img {
+        width: 55%; }
+      body .content #icon_description #description {
+        margin-top: -10px;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        padding-bottom: 20px; }
     body .content #current_weather {
       width: 60%;
       float: right;
@@ -66,6 +103,8 @@ body {
       body .content #current_weather h3 {
         font-size: 1.5rem;
         padding-bottom: 10px; }
+        body .content #current_weather h3 #currentCity {
+          text-shadow: 1px 1px 1px black, 2px 2px 2px #ecbc1e; }
       body .content #current_weather p {
         font-size: 1.2rem;
         padding-top: 5px;
@@ -75,8 +114,9 @@ body {
       body .content #current_weather .temp {
         font-weight: bold;
         text-shadow: 1px 1px 1px #0d59af;
-        text-shadow: 1px 1px 1px black; }
+        text-shadow: 1px 1px 1px black;
+        padding-left: 10px; }
       body .content #current_weather #current_temp .current {
-        font-size: 1.7rem; }
+        font-size: 3rem; }
 
 /*# sourceMappingURL=style.css.map */
