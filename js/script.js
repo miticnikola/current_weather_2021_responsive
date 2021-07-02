@@ -2,9 +2,10 @@ let formInputCity = document.getElementById('city');
 let inputCityName = document.getElementById('cityName');
 let headerCurrentCity = document.getElementById('currentCity');
 
+let pCurrentTemp = document.querySelector('.current');
+let pRealFeel = document.querySelector('.feel');
 let pMinTemp = document.querySelector('.min');
 let pMaxTemp = document.querySelector('.max');
-let pCurrentTemp = document.querySelector('.current');
 let pWeatherIcon = document.getElementById('weather_icon');
 
 
@@ -26,13 +27,15 @@ formInputCity.addEventListener('submit', e => {
         } 
         
         let temp = data.main.temp;
+        let realFeel = data.main.feels_like;
         let minTemp = data.main.temp_min;
         let maxTemp = data.main.temp_max;
         
         
         pCurrentTemp.innerHTML = Math.round(kelvinToCelsius(temp))+'°C';
-        pMaxTemp.innerHTML = Math.round(kelvinToCelsius(maxTemp))+'°C';
+        pRealFeel.innerHTML = Math.round(kelvinToCelsius(realFeel))+'°C';
         pMinTemp.innerHTML = Math.round(kelvinToCelsius(minTemp))+'°C'; // toFixed(2) ako zelim da ide na dve decimale
+        pMaxTemp.innerHTML = Math.round(kelvinToCelsius(maxTemp))+'°C';
 
 
         // Weather icon

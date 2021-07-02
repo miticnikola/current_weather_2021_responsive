@@ -34,7 +34,6 @@ body {
   body .content {
     border: 1px solid black;
     width: 45%;
-    padding: 20px 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -59,14 +58,25 @@ body {
       body .content #weather_icon img {
         width: 60%; }
     body .content #current_weather {
-      background-color: green;
       width: 60%;
-      float: right; }
+      float: right;
+      padding: 20px 0px;
+      color: white;
+      text-shadow: 1px 1px 1px black; }
       body .content #current_weather h3 {
         font-size: 1.5rem;
         padding-bottom: 10px; }
       body .content #current_weather p {
         font-size: 1.2rem;
-        padding-top: 5px; }
+        padding-top: 5px;
+        padding-left: 5px; }
+      body .content #current_weather p:nth-child(odd) {
+        background-color: #0d59af; }
+      body .content #current_weather .temp {
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #0d59af;
+        text-shadow: 1px 1px 1px black; }
+      body .content #current_weather #current_temp .current {
+        font-size: 1.7rem; }
 
 /*# sourceMappingURL=style.css.map */
