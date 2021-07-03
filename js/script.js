@@ -8,6 +8,7 @@ let pMinTemp = document.querySelector('.min');
 let pMaxTemp = document.querySelector('.max');
 let pWeatherIcon = document.getElementById('weather_icon');
 let pDescription = document.getElementById('description');
+let pDate = document.querySelector('.date');
 let h4Humidity = document.getElementById('hum');
 let h4Pressure = document.getElementById('press');
 let h4WindSpeed = document.getElementById('wind');
@@ -46,6 +47,15 @@ formInputCity.addEventListener('submit', e => {
         pMinTemp.innerHTML = Math.round(kelvinToCelsius(minTemp))+'°C'; // toFixed(2) ako zelim da ide na dve decimale
         pMaxTemp.innerHTML = Math.round(kelvinToCelsius(maxTemp))+'°C';
         pDescription.innerHTML = data.weather[0].description;
+
+
+        // Date
+        let date = new Date();
+        let day = date.getDay();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        pDate.innerHTML = `${day}.${month}.${year}`;
 
 
         // Weather icon
