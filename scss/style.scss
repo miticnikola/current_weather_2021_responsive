@@ -72,10 +72,8 @@ body {
             width: 40%;
             @include centeredFlex;
             flex-direction: column;
-            // background-color: blue;
             text-align: center;
             #weather_icon {
-                // background-color: yellowgreen;
                 img {
                     width: 55%;
                 }
@@ -85,12 +83,9 @@ body {
                 color: white;
                 text-shadow: 1px 1px 1px black;
                 padding-bottom: 20px;
-                // background-color: yellow;
-
             }
         }
         #current_weather {
-            // background-color: green;
             width: 60%;
             float: right;
             padding: 20px 0px;
