@@ -23,6 +23,7 @@ body {
     text-align: center;
     background-image: url('../img/sun-3588618_1920.jpg');
     background-size: cover 100vh;
+    // background-repeat: no-repeat;
     @include centeredFlex;
     flex-direction: column;
     height: 100vh;
@@ -30,23 +31,25 @@ body {
     header {
         width: 50%;
         form {
+            width: 100%;
             input {
+                margin: 0;
                 font-size: 1.1rem;
                 padding: 12px 5px;
+                border: none;
+                float: left;
             }
             #cityName {
                 width: 70%;
                 font-style: italic;
-                border: none;
                 box-shadow: $boxShadow;
                 padding-left: 10px;
                 border-radius: 5px 0 0 0;
                 outline-color: $yellow;
             }
             input[type = "submit"]{
-                width: 28.9%;
+                width: 30%;
                 background-color: $yellow;
-                border: none;
                 color: white;
                 text-shadow: 1px 1px 1px black;
                 font-weight: bold;
@@ -88,14 +91,16 @@ body {
         #current_weather {
             width: 60%;
             float: right;
-            padding: 20px 0px;
+            padding: 20px 10px 20px 0px;
             color: white;
             text-shadow: 1px 1px 1px black;
+
 
 
             h3 {
                 font-size: 1.5rem;
                 padding-bottom: 10px;
+                margin-right: 15px;
                 #currentCity {
                     text-shadow: 1px 1px 1px black, 2px 2px 2px $yellow;
                 }
@@ -120,6 +125,85 @@ body {
                 .current {
                     font-size: 3rem;
                 }
+            }
+        }
+    }
+}
+
+// Media queries
+// @media only screen and (max-width: 1415px) {
+//     body {
+//         header {
+//             width: 60%;
+//         }
+//         // .content {
+//         //     width: 70%;
+//         // }
+//     }
+// }
+
+@media only screen and (max-width: 1178px) {
+    body {
+        header {
+            width: 70%;
+        }
+        .content {
+            width: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1016px) {
+    body {
+        header {
+            width: 80%;
+        }
+        .content {
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 898px) {
+    body {
+        header {
+            width: 90%;
+        }
+        .content {
+            width: 90%;
+            @include centeredFlex;
+            flex-direction: column;
+            // text-align: center; 
+            #icon_description {
+                width: 80%;
+            }
+            #current_weather {
+                width: 80%;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 487px) {
+    body {
+        header {
+            width: 90%;
+            form {
+                input {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .content {
+            width: 90%;
+            @include centeredFlex;
+            flex-direction: column;
+            #icon_description {
+                width: 80%;
+            }
+            #current_weather {
+                width: 80%;
             }
         }
     }

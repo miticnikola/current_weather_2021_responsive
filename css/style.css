@@ -26,35 +26,38 @@ body {
   font-family: 'Josefin Sans', sans-serif; }
   body header {
     width: 50%; }
-    body header form input {
-      font-size: 1.1rem;
-      padding: 12px 5px; }
-    body header form #cityName {
-      width: 70%;
-      font-style: italic;
-      border: none;
-      -webkit-box-shadow: 0px 0px 11px 2px #ffffff;
-              box-shadow: 0px 0px 11px 2px #ffffff;
-      padding-left: 10px;
-      border-radius: 5px 0 0 0;
-      outline-color: #ecbc1e; }
-    body header form input[type="submit"] {
-      width: 28.9%;
-      background-color: #ecbc1e;
-      border: none;
-      color: white;
-      text-shadow: 1px 1px 1px black;
-      font-weight: bold;
-      -webkit-box-shadow: 0px 0px 11px 2px #ffffff;
-              box-shadow: 0px 0px 11px 2px #ffffff;
-      border-radius: 0 5px 0 0;
-      -webkit-transition: 0.3s ease;
-      transition: 0.3s ease; }
-      body header form input[type="submit"]:hover {
-        content: '';
-        background-color: #0d59af;
+    body header form {
+      width: 100%; }
+      body header form input {
+        margin: 0;
+        font-size: 1.1rem;
+        padding: 12px 5px;
+        border: none;
+        float: left; }
+      body header form #cityName {
+        width: 70%;
+        font-style: italic;
+        -webkit-box-shadow: 0px 0px 11px 2px #ffffff;
+                box-shadow: 0px 0px 11px 2px #ffffff;
+        padding-left: 10px;
+        border-radius: 5px 0 0 0;
+        outline-color: #ecbc1e; }
+      body header form input[type="submit"] {
+        width: 30%;
+        background-color: #ecbc1e;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        font-weight: bold;
+        -webkit-box-shadow: 0px 0px 11px 2px #ffffff;
+                box-shadow: 0px 0px 11px 2px #ffffff;
+        border-radius: 0 5px 0 0;
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease; }
+        body header form input[type="submit"]:hover {
+          content: '';
+          background-color: #0d59af;
+          -webkit-transition: 0.3s ease;
+          transition: 0.3s ease; }
   body .content {
     -webkit-box-shadow: 0px 0px 11px 2px #ffffff;
             box-shadow: 0px 0px 11px 2px #ffffff;
@@ -97,12 +100,13 @@ body {
     body .content #current_weather {
       width: 60%;
       float: right;
-      padding: 20px 0px;
+      padding: 20px 10px 20px 0px;
       color: white;
       text-shadow: 1px 1px 1px black; }
       body .content #current_weather h3 {
         font-size: 1.5rem;
-        padding-bottom: 10px; }
+        padding-bottom: 10px;
+        margin-right: 15px; }
         body .content #current_weather h3 #currentCity {
           text-shadow: 1px 1px 1px black, 2px 2px 2px #ecbc1e; }
       body .content #current_weather p {
@@ -118,5 +122,62 @@ body {
         padding-left: 10px; }
       body .content #current_weather #current_temp .current {
         font-size: 3rem; }
+
+@media only screen and (max-width: 1178px) {
+  body header {
+    width: 70%; }
+  body .content {
+    width: 70%; } }
+@media only screen and (max-width: 1016px) {
+  body header {
+    width: 80%; }
+  body .content {
+    width: 80%; } }
+@media only screen and (max-width: 898px) {
+  body header {
+    width: 90%; }
+  body .content {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    body .content #icon_description {
+      width: 80%; }
+    body .content #current_weather {
+      width: 80%; } }
+@media only screen and (max-width: 487px) {
+  body header {
+    width: 90%; }
+    body header form input {
+      font-size: 0.8rem; }
+  body .content {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    body .content #icon_description {
+      width: 80%; }
+    body .content #current_weather {
+      width: 80%; } }
 
 /*# sourceMappingURL=style.css.map */
