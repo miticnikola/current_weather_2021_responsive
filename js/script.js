@@ -44,19 +44,9 @@ formInputCity.addEventListener('submit', e => {
         
         pCurrentTemp.innerHTML = Math.round(kelvinToCelsius(temp))+'°C';
         pRealFeel.innerHTML = Math.round(kelvinToCelsius(realFeel))+'°C';
-        pMinTemp.innerHTML = Math.round(kelvinToCelsius(minTemp))+'°C'; // toFixed(2) ako zelim da ide na dve decimale
+        pMinTemp.innerHTML = Math.round(kelvinToCelsius(minTemp))+'°C'; 
         pMaxTemp.innerHTML = Math.round(kelvinToCelsius(maxTemp))+'°C';
         pDescription.innerHTML = data.weather[0].description;
-
-
-        // Date
-        let date = new Date();
-        let day = date.getDay();
-        let month = date.getMonth() + 1;
-        let year = date.getFullYear();
-
-        pDate.innerHTML = `${day}.${month}.${year}`;
-
 
         // Weather icon
         let currentWeatherIcon = data.weather[0].icon;
