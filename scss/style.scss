@@ -175,7 +175,7 @@ body {
             flex-direction: column;
             // text-align: center; 
             #icon_description {
-                width: 80%;
+                width: 55%;
             }
             #current_weather {
                 width: 80%;
@@ -204,6 +204,30 @@ body {
             }
             #current_weather {
                 width: 80%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 320px) {
+    body {
+        header {
+            width: 90%;
+            form {
+                input {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .content {
+            width: 90%;
+            @include centeredFlex;
+            flex-direction: column;
+            #icon_description {
+                width: 100%;
+            }
+            #current_weather {
+                width: 100%;
+                padding-left: 10px;
             }
         }
     }
