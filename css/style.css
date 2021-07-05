@@ -156,25 +156,10 @@ body {
     body .content #current_weather {
       width: 80%; } }
 @media only screen and (max-width: 487px) {
-  body header {
-    width: 90%; }
-    body header form input {
-      font-size: 0.8rem; }
+  body header form input {
+    font-size: 0.8rem; }
   body .content {
-    width: 90%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    width: 90%; }
     body .content #icon_description {
       width: 80%; }
     body .content #current_weather {
@@ -185,20 +170,7 @@ body {
     body header form input {
       font-size: 0.8rem; }
   body .content {
-    width: 90%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    width: 90%; }
     body .content #icon_description {
       width: 100%; }
     body .content #current_weather {

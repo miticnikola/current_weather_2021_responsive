@@ -188,7 +188,6 @@ body {
 @media only screen and (max-width: 487px) {
     body {
         header {
-            width: 90%;
             form {
                 input {
                     font-size: 0.8rem;
@@ -197,8 +196,6 @@ body {
         }
         .content {
             width: 90%;
-            @include centeredFlex;
-            flex-direction: column;
             #icon_description {
                 width: 80%;
             }
@@ -220,8 +217,6 @@ body {
         }
         .content {
             width: 90%;
-            @include centeredFlex;
-            flex-direction: column;
             #icon_description {
                 width: 100%;
             }
